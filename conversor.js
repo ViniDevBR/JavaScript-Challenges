@@ -1,27 +1,32 @@
-function conversion(value, medida) {
-  let result
-  switch (medida) {
-    case 'mm':
-      result = value * 1000
+const metros = Number(prompt('Qual o valor de metros que você deseja converter?'))
+const medida = prompt(`Em qual unidade você deseja converter?
+      
+      a) mm (Milimetros)
+      b) cm (Centimetro)
+      c) dm (Decimetro)
+      d) dam (Decametro)
+      e) hm (hectometro)
+      f) km (kilometro)`)
+
+switch (medida) {
+  case 'a':
+    alert(`O valor em milimetros é: ${metros * 1000}mm`)
       break
-    case 'cm':
-      result = value * 100
+  case 'b':
+    alert(`O valor em centimetros é: ${metros * 100}cm`)
       break
-    case 'dm':
-      result = value * 10
+  case 'c':
+    alert(`O valor em decimetros é: ${metros * 10}dm`)
       break
-    case 'dam':
-      result = value / 10
+  case 'd':
+    alert(`O valor em decametros é: ${metros / 10}dam`)
       break
-    case 'hm':
-      result = value / 100
+  case 'e':
+    alert(`O valor em hectometro é: ${metros / 100}hm`)
       break
-    case 'km':
-      result = value / 1000
+  case 'f':
+    alert(`O valor em kilometros é: ${metros / 1000}km`)
       break
-    default:
-      console.log('Medida invalida')
-  }
-  return result
+  default:
+    console.log('Medida invalida')
 }
-console.log(conversion(10,'cm'))
